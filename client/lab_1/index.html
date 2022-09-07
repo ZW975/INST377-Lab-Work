@@ -1,20 +1,39 @@
-include your HTML opening tags
-and your hidden "head" tag
-and your "title" tag
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <meta charset = 'UTF - 8'/>
+    <title>Zijing Wang's Lab 1</title>
+  </head>
 
-
-full-width wrapper div
-  header containing: YOUR NAME's Labs For INST377
-  container div
-      left div
-        sub-header saying "albums"
-        Your top 5 albums in an ordered list
-      right div (main div for the site)
-        sub-header saying "image carousel"
-          div to contain four images
-            four images of mochi from your readings, all square (they're four different image types!)
-          div to contain a description or text
-            description of images
-
-
-full-width page footer containing your github account name and a link to your gitHub account
+  <body>
+    <div>
+      <h1>Zijing Wang's Labs for INST377</h1>
+      <div>
+        <div>
+          <h2>Album Names</h2>
+            <ol>
+              <li>New Light - John Mayer</li>
+              <li>Circles - Post Malone</li>
+              <li>Goodbyes (feat. Young Thug) - Post Malone</li>
+              <li>Night Glow - Tanya Chua</li>
+              <li>Rubia - Charlie Zhou</li>
+            </ol>
+        </div>
+          
+        <div>
+          <h2>Image Carousel</h2>
+            <div>
+              <img src='images/mochi.jpg'>
+              <img src='images/mochi.gif'>
+              <img src='images/mochi.png'>
+              <img src='images/mochi.svg'>
+            </div>
+          <div>
+            <p>Description of the images above: These are four mochi pictures of diferent format.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>ZW975: <a href="https://github.com/ZW975">Zijing Wang's Github Account</footer>
+  </body>
+</html>
