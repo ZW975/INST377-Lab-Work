@@ -1,5 +1,45 @@
-<!--
-    Replace this with your working code from Lab 2, and include:
-    - The styles in this folder's `style.css`
-    - The script in script.js, which should be included via a `<script src="script.js" >` call before your closing </body> tag 
--->
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <meta charset = 'UTF - 8'/>
+    <title>Zijing Wang's Lab 1</title>
+    <link rel='stylesheet' href='style.css'/>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="header"><h1>Zijing Wang's Labs for INST377</h1></div>
+      <div class="container">
+        <div class="box left_section">
+          <h2 class>Album Names</h2>
+            <ol class="box">
+              <li>New Light - John Mayer</li>
+              <li>Circles - Post Malone</li>
+              <li>Goodbyes (feat. Young Thug) - Post Malone</li>
+              <li>Night Glow - Tanya Chua</li>
+              <li>Rubia - Charlie Zhou</li>
+            </ol>
+        </div>
+          
+        <div class="box right_section">
+          <h2 class>Image Carousel</h2>
+          <div class="carousel">
+            <botton class="prev">prev</botton>
+              <div class="slides">
+                <div class = "carousel_item visible"><img id="slide_1" src='images/rickroll1.gif' alt='Never gonna give you up'></div>
+                <div class = "carousel_item hidden"><img id="slide_2" src='images/rickroll2.jpg' alt='Never gonna let you down'></div>
+                <div class = "carousel_item hidden"><img id="slide_3" src='images/rickroll3.jpg' alt='Never gonna run around'></div>
+                <div class = "carousel_item hidden"><img id="slide_4" src='images/rickroll4.jpg' alt='and desert you'></div>
+            </div>
+            <botton class="next">next</botton>
+          </div>
+          <div class="box">
+            <p>Never gonna give you up, never gonna let you down, never gonna run around and desert you</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">ZW975: <a href="https://github.com/ZW975">Zijing Wang's Github Account</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
