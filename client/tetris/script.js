@@ -8,6 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
   let timerID;
   let score = 0;
 
+  const colors = [
+    'orange',
+    'green',
+    'red',
+    'purple',
+    'blue'
+  ];
+
   // Tetrominoes
   const jTetromino = [
     [1, width + 1, width * 2 + 1, 2],
@@ -70,12 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
   function draw() {
     current.forEach((index) => {
       squares[currentPosition + index].classList.add('tetromino');
+      squares[currentPosition + index].style.backgroundColor = colors[random];
     });
   }
 
   function undraw() {
     current.forEach((index) => {
       squares[currentPosition + index].classList.remove('tetromino');
+      squares[currentPosition + index].style.backgroundColor = '';
     });
   }
 
@@ -177,9 +187,11 @@ document.addEventListener('DOMContentLoaded', () => {
   function displayShape() {
     displaySquares.forEach((square) => {
       square.classList.remove('tetromino');
+      square.style.backgroundColor = '';
     });
     upNextTetrominoes[nextRandom].forEach((index) => {
       displaySquares[displayIndex + index].classList.add('tetromino');
+      displaySquares[displayIndex + index].style.backgroundColor = colors[nextRandom];
     });
   }
 
@@ -207,6 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
         row.forEach((index) => {
           squares[index].classList.remove('taken');
           squares[index].classList.remove('tetromino');
+          squares[index].style.backgroundColor = '';
         });
         const squaresRemoved = squares.splice(i, width);
         squares = squaresRemoved.concat(squares);
@@ -216,10 +229,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // game over
-  fuction gameOver() {
-    if(current.some(index => squares[currentPosition + index].classList.contains('taken'))){
-        scoreDisplay.innerHTML = 'Game Over';
-        clearInterval(timerID);
+  function gameOver() {
+    if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+      scoreDisplay.innerHTML = 'Game Over';
+      clearInterval(timerID);
     }
   }
 });
